@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FcmService } from '../fcm.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
+  token = "Getting token...";
+  constructor(
+    private fcm : FcmService
+  ) {
+    
+  }
 
 }

@@ -1,5 +1,7 @@
 {
   "name": "BaggageStatus",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

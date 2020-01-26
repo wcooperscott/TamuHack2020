@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Missing Luggage Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Missing Luggage Report</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Bag Name</ion-label>
+        <p>{{bag.name}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Tracked</ion-label>
+        <p>{{getDate(bag)}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Fill-out Missing Report</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>If you have any extra information you'd like to add, please do so.</p>
+      <ion-textarea placeholder="" [(ngModel)]="customerNotes"></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="danger" (click)="submitData()">Submit</ion-button>
+</ion-content>
